@@ -1,14 +1,14 @@
 // Object (Objetos)
 // Um objeto agrupa várias informações dentro de uma mesma variável, usando chave e valor.
-// let pessoa = {
-//     nome: "Rafaella",
-//     idade: 16,
-//     cidade: "São Paulo"
-// };
+let pessoa = {
+    nome: "Rafaella",
+    idade: 16,
+    cidade: "São Paulo"
+};
 
-// console.log (pessoa.nome);
-// console.log (pessoa.idade);
-// console.log (pessoa.cidade)
+console.log (pessoa.nome);
+console.log (pessoa.idade);
+console.log (pessoa.cidade)
 
 
 // Crie um objeto chamado 'carro' com as propriedades 'marca', 'modelo', e 'ano'.
