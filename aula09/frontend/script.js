@@ -106,3 +106,6 @@ async function buscaCachorro(url) {
 // ==============================
 // AÇÕES
 // ==============================
+
+// Arthur + Rafaella = true
+
