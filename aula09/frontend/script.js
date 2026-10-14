@@ -35,7 +35,7 @@ const API = "http://localhost:3000/api/cachorros";
 // função principal 
 // ===============================
 
-async function buscaCachorro(url) {
+async function buscarCachorro(url) {
     dogArea.classList.add("loading");
     try{
     // faz requisição HTTP para API
@@ -107,5 +107,33 @@ async function buscaCachorro(url) {
 // AÇÕES
 // ==============================
 
-// Arthur + Rafaella = true
 
+// função que busca cachorro aleatório
+function cachorroAleatorio() {
+    // Chamar a função principal 
+    // Passando a rota /aleatorio da API 
+    buscarCachorro (`${API}/aleatorio`);
+}
+
+// Função que busca cachorro por raça 
+function buscarPorRaca() {
+    // Pegar o texto digitado input
+    // Trim = remove os espaços em branco {trim()} do ínicio e do fim do texto.
+    const raca = breedInput.ariaValueMax.trim().toLowerCase();
+
+    // Verificar se o usuário digitou algo 
+    if (!raca) {
+        // Se não digitou, mostra alerta
+        alert ("Digite uma raça!")
+        // Interrompe a função
+        return;
+    }
+
+    // Chamar a API passando a raca na URL
+    // Exemplo: /api/cachorros/husky
+    buscarCachorro(`${API}/${raca}`)
+}
+
+// =====================================
+// EVENTOS
+// =====================================
