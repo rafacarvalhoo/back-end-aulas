@@ -137,3 +137,26 @@ function buscarPorRaca() {
 // =====================================
 // EVENTOS
 // =====================================
+
+// Quando clicar no botão "aleatório"
+randomBtn.addEventListener("click", cachorroAleatorio)
+
+// Quando clicar no botão "buscar"
+searchBtn.addEventListener("click", buscarPorRaca)
+
+// Quando clicar na imagem do cachorro
+// Carrega outro cachorro aleatório
+dogImage.addEventListener("click", cachorroAleatorio);
+
+// Quando o usuário apertar o ENTER no input 
+breedInput.addEventListener("keypress", (event) => {
+    // Verifica se a tecla pressionada foi enter 
+    if (event.key === "Enter") {
+        // Execute a busca por raça
+        buscarPorRaca();
+    }
+})
+
+// CARREGA AO ABRIR A PÁGINA
+
+cachorroAleatorio()
