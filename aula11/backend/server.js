@@ -93,7 +93,7 @@ app.delete('/tarefas/:id', (requisicao, resposta) => {
     const id = requisicao.params.id;
 
     // DELETE: remove a linha que tem esse id
-    banco.prepare('DELETE FORM tarefas WHERE id = ?').run(id);
+    banco.prepare('DELETE FROM tarefas WHERE id = ?').run(id);
 
     resposta.json({ ok: true});
 })
